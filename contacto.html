@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"><!--dice que nuestro sitio utiliza
-    caracteres especiales como acentos, Ñ, etc en español -->
+    <meta charset="UTF-8"><!--dice que nuestro sitio utiliza caracteres especiales como acentos, Ñ, etc en español -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>e-commerce - Contacto</title>
@@ -34,10 +33,96 @@
         <h2 class="text-center">Contacto</h2>
 
         <form>
-            <label for="nombre">Nombre: </label>
-            <input id="nombre" type="text" placeholder="Nombre">
+            <fieldset>
+                <legend>Tus Datos</legend>
+                <div class="campo">
+                    <label for="nombre">Nombre: </label>
+                    <input id="nombre" type="text" placeholder="Nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="asunto">Asunto: </label>
+                    <input id="asunto" type="text" placeholder="Asunto">
+                </div>
+                <div>
+                    <label for="email">E-mail: </label>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                </div>
+                <div class="campo">
+                    <label for="tel">Teléfono: </label>
+                    <input type="tel" id="tel" placeholder="Teléfono">
+                </div>
+                <div class="campo">
+                    <label for="date">Fecha: </label>
+                    <input type="date" id="date" placeholder="" required>
+                </div>
+                <div class="campo">
+                    <label for="time">Hora: </label>
+                    <input type="time" id="time" placeholder="">
+                </div>
+                <div class="campo">
+                    <label for="datetime-local">Fecha y Hora: </label>
+                    <input type="datetime-local" id="datetime-local">
+                </div>
+                <div class="campo">
+                    <label for="file">Subir Archivo: </label>
+                    <input type="file" id="file">
+                </div>
+                <div class="campo">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Mensaje: </label>
+                    <textarea name="mensaje" id="mensaje" cols="90" rows="20"></textarea>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Pais</legend>
+                <div class="campo">
+                    <label for="pais">País</label>
+                    <select id="pais" required>
+                        <option value="">-- Seleccionar --</option>
+                        <option value="AR">Argentina</option>
+                        <option value="BL">Bolivia</option>
+                        <option value="BR">Brasil</option>
+                        <option value="CL">Chile</option>
+                        <option value="CO">Colombia</option>
+                        <option value="PR">Paraguay</option>
+                        <option value="UY">Uruguay</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Informacion Extra</legend>
+                <div class="campo" required>
+                    <label for="cliente">Cliente</label>
+                    <input type="radio" id="cliente" name="tipo" value="cliente">
+                </div>
+                <div class="campo" required>
+                    <label for="proveedor">Proveedor</label>
+                    <input type="radio" id="proveedor" name="tipo" value="proveedor">
+                </div>
+                <div class="campo">
+                    <label for="prueba">prueba</label>
+                    <input type="checkbox" id="prueba" name="">
+                </div>
+                <div class="campo" required>
+                    <label for="categoria">Categoría de Interés</label>
+                    <input list="categorias" name="categorias">
+                    <datalist id="categorias">
+                        <option value="Cocina">
+                        <option value="Exterior">
+                        <option value="Recamaras">
+                        <option value="Oficina">
+                        <option value="Interior">
+                        <option value="Televisión">
+                    </datalist>
+                </div>
+            </fieldset>
+            <input type="submit" value="Enviar Formulario">
         </form>
-
     </main>
 
     <footer class="site-footer">
