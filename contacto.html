@@ -32,7 +32,7 @@
     <main class="contenido-principal contenedor">
         <h2 class="text-center">Contacto</h2>
 
-        <form>
+        <form class="formulario">
             <fieldset>
                 <legend>Tus Datos</legend>
                 <div class="campo">
@@ -43,7 +43,7 @@
                     <label for="asunto">Asunto: </label>
                     <input id="asunto" type="text" placeholder="Asunto">
                 </div>
-                <div>
+                <div class="campo">
                     <label for="email">E-mail: </label>
                     <input type="email" id="email" placeholder="E-mail" required>
                 </div>
@@ -73,7 +73,7 @@
                 </div>
                 <div class="campo">
                     <label for="mensaje">Mensaje: </label>
-                    <textarea name="mensaje" id="mensaje" cols="90" rows="20"></textarea>
+                    <textarea name="mensaje" id="mensaje" cols="50" rows="10"></textarea>
                 </div>
             </fieldset>
             
@@ -104,10 +104,6 @@
                     <label for="proveedor">Proveedor</label>
                     <input type="radio" id="proveedor" name="tipo" value="proveedor">
                 </div>
-                <div class="campo">
-                    <label for="prueba">prueba</label>
-                    <input type="checkbox" id="prueba" name="">
-                </div>
                 <div class="campo" required>
                     <label for="categoria">Categoría de Interés</label>
                     <input list="categorias" name="categorias">
@@ -121,7 +117,7 @@
                     </datalist>
                 </div>
             </fieldset>
-            <input type="submit" value="Enviar Formulario">
+            <input class="btn" type="submit" value="Enviar Formulario">
         </form>
     </main>
 
